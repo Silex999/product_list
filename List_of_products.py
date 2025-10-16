@@ -14,7 +14,7 @@ response_start = '''
 <head>
     <style>
     body {background-color: #fff; color: #fff; font-family: Arial, sans-serif;}
-    a {font-size: 16px; text-decoration: none; color: #292929; text-decoration: none; font-weight: 100; transition: all 200ms ease-in-out 0s;}
+    a {font-size: 16px; text-decoration: none; color: #292929; text-decoration: none; transition: all 200ms ease-in-out 0s;}
     li {list-style-type: none;}
     a:hover { text-decoration: none; transition: all 200ms ease-in-out 0s; opacity: 0.7}
     .product {display: flex;padding: 20px;background-color: #ebebeb; width: 15%; margin-bottom: 10px; border-radius: 10px;}
@@ -22,6 +22,7 @@ response_start = '''
     p {color: #292929;}
     h1 {color: #292929;}
     h2 {color: #292929;}
+    h3 {color: #292929;}
     .link_main {margin-left: 40px;}
     </style>
     <meta charset="UTF-8">  
@@ -59,7 +60,7 @@ class MySiteHandler(BaseHTTPRequestHandler):
             title = list_products[prod_id][0]
             list_products_in_html += (
                 f"<li>"
-                f"<div class='product'><h3><a href=\"/product?id={prod_id}\">{title}</a></h3></div>"
+                f"<a href=\"/product?id={prod_id}\"><div class='product'><h3>{title}</h3></div></a>"
                 f"</li>"
             )
 
