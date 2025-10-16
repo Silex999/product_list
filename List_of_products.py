@@ -85,7 +85,7 @@ class MySiteHandler(BaseHTTPRequestHandler):
                 f"<p>{description}</p>"
                 f"<p>{price}</p>"
                 f"</div>"
-                f"<div><a class='link_main' href='/products'>Вернуться назад</a></div>"
+                f"<div><a class='link_main' href='/'>Вернуться назад</a></div>"
             )
             self.response(200)
             self.render(self.render(content))
@@ -110,3 +110,4 @@ def run(http_server=HTTPServer, handler=BaseHTTPRequestHandler):
 if __name__ == '__main__':
     print('start server')
     run(HTTPServer, MySiteHandler)
+
